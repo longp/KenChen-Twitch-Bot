@@ -16,3 +16,5 @@ var options = {
 };
 
 var client = new tmi.client(options);
+
+client.connect();
