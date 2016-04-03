@@ -18,6 +18,7 @@ var options = {
 var client = new tmi.client(options);
 
 client.connect();
-
-
-client.say("neosoldier0", "hi im ken, welcome to monkey island!");
+client.color("HotPink");
+client.on("connected", function(address, port) {
+  client.action("neosoldier0", "hi im ken, welcome to monkey island!")
+})
