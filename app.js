@@ -19,10 +19,14 @@ var client = new tmi.client(options);
 
 client.connect();
 
+//initial welcome message on connect
 client.on("connected", function(address, port) {
   client.color("BlueViolet");
-  client.action("neosoldier0", " hi im neosoldierbot, welcome to monkey island! MrDestructoid")
+  client.action("neosoldier0", " hi im neosoldierbot, welcome to monkey island! MrDestructoid");
 });
+
+//modding the great Gooey
+client.on("mod", function ('neosoldier0', 'g000ey'));
 
 // tilt ken cuz hes a monkey :P
 client.on('chat', function(channel, user, message, self) {
