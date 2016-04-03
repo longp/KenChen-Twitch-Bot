@@ -18,7 +18,26 @@ var options = {
 var client = new tmi.client(options);
 
 client.connect();
-client.color("HotPink");
+
 client.on("connected", function(address, port) {
+  client.color("GoldenRod");
   client.action("neosoldier0", "hi im ken, welcome to monkey island!")
+})
+
+client.on('chat', function(channel, user, message, self) {
+  if(message === "what is ken?" || message === "is ken monkey?" || message === "tilt") {
+    client.action("neosoldier0", user['display-name'] +", ken is a monkey. King of NA monkeys");
+  }
+});
+
+client.on('chat', function(channel, user, message, self) {
+  if(message === "what is ken?" || message === "is ken monkey?" || message === "tilt") {
+    client.action("neosoldier0", user['display-name'] +", ken is a monkey. King of NA monkeys");
+  }
+});
+
+client.on('chat', function(channel, user, message, self) {
+  if(message === "rank" || message === "stats" || message === "naopgg") {
+    client.action("neosoldier0", "http://na.op.gg/summoner/userName=neosoldier0");
+  }
 })
