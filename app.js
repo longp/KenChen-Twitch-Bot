@@ -38,6 +38,6 @@ client.on('chat', function(channel, user, message, self) {
 
 client.on('chat', function(channel, user, message, self) {
   if(message === "rank" || message === "stats" || message === "naopgg") {
-    client.action("neosoldier0", "http://na.op.gg/summoner/userName=neosoldier0");
+    client.action("neosoldier0", "Monkey stats here:http://na.op.gg/summoner/userName=neosoldier0");
   }
 })
