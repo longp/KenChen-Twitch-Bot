@@ -26,7 +26,7 @@ client.on("connected", function(address, port) {
 });
 
 //modding the great Gooey
-client.on("mod", function ('neosoldier0', 'g000ey'));
+// client.on("mod", function('neosoldier0', 'g000ey'));
 
 // tilt ken cuz hes a monkey :P
 client.on('chat', function(channel, user, message, self) {
@@ -47,7 +47,7 @@ client.on('chat', function(channel, user, message, self) {
   var banInMessage = message.slice(0,3);
   console.log(usernameInMessage);
   console.log(banInMessage);
-  if(user.username === 'g000ey' && usernameInMessage !== '' ){
+  if(user.username === 'neosoldier0' && usernameInMessage !== '' ){
       client.ban('neosoldier0', usernameInMessage);
       console.log('banned' + usernameInMessage)
     }
