@@ -20,24 +20,25 @@ var client = new tmi.client(options);
 client.connect();
 
 client.on("connected", function(address, port) {
-  client.color("GoldenRod");
-  client.action("neosoldier0", "hi im ken, welcome to monkey island!")
-})
-
-client.on('chat', function(channel, user, message, self) {
-  if(message === "what is ken?" || message === "is ken monkey?" || message === "tilt") {
-    client.action("neosoldier0", user['display-name'] +", ken is a monkey. King of NA monkeys");
-  }
+  client.color("BlueViolet");
+  client.action("neosoldier0", " hi im neosoldierbot, welcome to monkey island! MrDestructoid")
 });
 
+
 client.on('chat', function(channel, user, message, self) {
   if(message === "what is ken?" || message === "is ken monkey?" || message === "tilt") {
-    client.action("neosoldier0", user['display-name'] +", ken is a monkey :D. King of NA monkeys Kappa");
+    client.action("neosoldier0", " ken is a monkey. King of NA monkeys Kappa Kappa Kappa");
+  }
+});
+// welcomes user when they say hi
+client.on('chat', function(channel, user, message, self) {
+  if(user.username === user.username && message === "hi"){
+    client.action('neosoldier0', "hi " + user.username + " Welcome to Monkey Island!! KappaPride")
   }
 });
 
 client.on('chat', function(channel, user, message, self) {
   if(message === "rank" || message === "stats" || message === "naopgg") {
-    client.action("neosoldier0", "Monkey stats here :http://na.op.gg/summoner/userName=neosoldier0 :D :D");
+    client.action("neosoldier0", " Monkey stats here :D :D : http://na.op.gg/summoner/userName=neosoldier0 ");
   }
 })
