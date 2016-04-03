@@ -7,5 +7,12 @@ var options = {
   connection:{
     cluster:"aws",
     reconnect:true
-  }
-}
+  },
+  identity: {
+    username:"NeosoldierBot",
+    password:"oauth:fksg5sm1zzrl153r1zwc2tktxk1hns"
+  },
+  channels:["#neosoldier0"]
+};
+
+var client = new tmi.client(options);
